@@ -1,0 +1,27 @@
+def first_recursion(recurring_characters):
+
+    real_sol = dict()
+
+    for i in recurring_characters:
+        if i not in real_sol.keys():
+            real_sol[i] = 1
+        else:
+            real_sol[i] += 1
+
+
+    solute_list = list()
+
+    for chars in real_sol:
+        if real_sol[chars]<=1:
+            #none
+            continue
+        else:
+            solute_list.append(chars)
+
+    if solute_list == []:
+        print('Null')
+    else:
+        print('Yep.. buckle on.. we got an output for ya!!!')
+        print(F'The first recurring character from the string "{recurring_characters}" was', '::: ' + solute_list[0]+' :::')
+
+first_recursion('Bafdgte')
