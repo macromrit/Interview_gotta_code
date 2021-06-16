@@ -24,4 +24,3 @@ def first_recursion(recurring_characters):
         print('Yep.. buckle on.. we got an output for ya!!!')
         print(F'The first recurring character from the string "{recurring_characters}" was', '::: ' + solute_list[0]+' :::')
 
-first_recursion('Bafdgte')
