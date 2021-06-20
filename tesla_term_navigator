@@ -1,1 +1,40 @@
-#not uploaded yet
+#Tesla Hots
+#defining a function balloon navigator
+def balloon_navigator(list1: list)->int and str:
+
+    #pre defining valid keys    
+    #blue print-> (total_number_of_frequencies, actual_frequencies)
+    mapper = {'b':[0,0], 
+              'a':[0,0], 
+              'l':[0,0],
+              'o':[0,0],
+              'n':[0,0]}
+    
+    #filtering out valid keys
+    for elem in list1:
+        if elem in list('balloon'):
+            if elem in mapper.keys():
+                mapper[elem][0] += 1
+            else:
+                continue
+    
+    #manipulating the valid keys -> basically... dividing the imperative elements ('o', 'l') with two to make things work right
+    for critic in mapper:
+        if critic in ('l','o'):
+            mapper[critic][1] = mapper[critic][0]//2
+        else:
+            mapper[critic][1] = mapper[critic][0]
+
+    #predefing a variable to impart it in the min figuring program
+    pre_value = mapper['b'][1]
+
+    #the min figuring program.. which typically fetches the lowest value from the dict
+    for lol in mapper:
+        if mapper[lol][1]<pre_value:
+            pre_value = mapper[lol][1]
+        else:
+            continue
+
+
+    print("total no. of times the term balloon could be procured was: {}".format(pre_value))
+    return pre_value
