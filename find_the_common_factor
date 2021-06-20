@@ -1,0 +1,53 @@
+#retrieving a
+while True:
+    try:
+        a = int(input("enter the int a: "))
+        #####
+        break
+    except(EOFError, KeyboardInterrupt, TypeError, ValueError):
+        print('Ooopsy.. Try Again')
+
+#retrieving b
+while True:
+    try:
+        b = int(input("enter the int b: "))
+        #####
+        break
+    except(EOFError, KeyboardInterrupt, TypeError, ValueError):
+        print('Ooopsy.. Try Again')
+
+
+#checking whether a is same as b
+if (a != b):
+    common_factor_a =list()
+    for i in range(1, a+1):
+        if a%i==0:
+            common_factor_a.append(i)
+        else:
+            continue
+
+    common_factor_b =list()
+    for j in range(1, b+1):
+        if a%j==0:
+            common_factor_b.append(j)
+        else:
+            continue
+
+
+    main_list = list()
+    for ele in common_factor_a:
+        for eli in common_factor_b:
+            if ele==eli:
+                main_list.append(ele)
+            else:
+                continue
+
+    print('total factors figured: {}'.format(len(main_list)))
+
+    print('the factor are: ', end=' ')
+    for factor in main_list:
+        print(factor, end=' ')
+
+#if a and b are same
+else:
+    print("daaang!! seriously.. please try again... don't input to synonomyous integers")
