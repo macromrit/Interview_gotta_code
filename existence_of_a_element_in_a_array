@@ -1,0 +1,13 @@
+def findNumber(arr: list, k: int):
+    # Write your code here
+    for i in arr:
+        if not (1<=i<=10**9):
+            print('Ooops..Sorry valid limit got surpassed')
+            return "failure"
+        else:
+            if k in arr:
+                print("YES", F'FOUND AT {arr.index(k)} :):):)')
+                return 'YES'                                       
+            else:
+                print("NO", "No such element detected yet...")
+                return 'NO'
