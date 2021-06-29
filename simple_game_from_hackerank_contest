@@ -1,0 +1,34 @@
+def simpleGame(scores: list=list()):
+    #[4,2,1,4,3]
+
+    score_1 = 0
+    score_2 = 0
+    count = 0
+    
+    for i in range(0, len(scores)):
+        
+        if count%2==0:#even 1.e score_1
+            score_1 += scores[0]
+            is_even = scores[0]%2
+
+            #poping the value which has been injected to the scores
+            scores.pop(0)
+                
+        else:#odd i.e score_2
+            score_2 += scores[0]
+            is_even = scores[0]%2
+
+            #poping the value which has been injected to the scores
+            scores.pop(0)
+
+        #if even the array should be reversed
+        if is_even == 0:
+            scores = scores[::-1]
+            
+        else:
+            pass
+        
+        count+=1
+            
+    main_ans = score_1 - score_2
+    return main_ans
