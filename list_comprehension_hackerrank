@@ -1,0 +1,15 @@
+x = int(input("max value of element 1: "))
+y = int(input("max value of element 1: "))
+z = int(input("max value of element 1: "))
+n = int(input("value that the sum of elements shouldn't synonymize with: "))
+
+main_list = list()
+
+for i in range(x+1):
+    for j in range(y+1):
+        for k in range(z+1):
+            if (i+j+k) != n:
+                ans = [i,j,k]
+                main_list.append(ans)
+
+print(main_list)
