@@ -1,0 +1,9 @@
+n = int(input())
+vals = str(input())
+z = vals.split()
+v = list()
+for i in z:
+    v.append(int(i))
+donedusted = set(v)
+main = sorted(list(donedusted))
+print(main[-2])
