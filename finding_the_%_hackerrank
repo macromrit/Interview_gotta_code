@@ -1,0 +1,12 @@
+limit = int(input())
+main_dict = dict()
+
+for i in range(limit):
+    main = str(input())
+    z = main.split()
+    total_sum = sum((float(z[1]), float(z[2]), float(z[3])))/3
+    main_dict[z[0]] = total_sum
+
+query_set = str(input())
+
+print("{:.2f}".format(main_dict[query_set]))
