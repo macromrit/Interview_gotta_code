@@ -1,0 +1,28 @@
+main_list = list()
+
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    main_list.append([name, score])#[name, score][0, 1]
+
+
+score_list = list()
+for i, j in main_list:
+    score_list.append(j)
+
+#sorting the list
+sortalized = sorted(list(set(score_list)))
+#runner-up score
+runner_val = sortalized[1]
+
+#sorting the main list
+names = list()
+for i in range(0, len(main_list)):
+    if main_list[i][1] == runner_val:
+        names.append(main_list[i][0])
+    else:
+        pass
+
+#rendering the output
+for ans in sorted(names):
+    print(ans)
