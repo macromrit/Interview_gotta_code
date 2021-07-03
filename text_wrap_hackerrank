@@ -1,0 +1,25 @@
+def wrap(string, max_width):
+    length = len(string)
+    element_list = list()
+    count = 0
+    
+    #collaborating elements from the str to element_list
+    for i in string:
+        element_list.append(i)
+    
+    #segregating the required elements via while loop
+
+
+    main_value = length//max_width+1#+1 for iterative purposes
+    
+    printable_str = ''
+
+    for _ in range(main_value):
+        evictor = element_list[0:max_width]+['\n']
+        
+        for collabs in evictor:
+            printable_str += F'{collabs}'
+        
+        del element_list[0:max_width]
+    
+    return printable_str.strip('\n')
