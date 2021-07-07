@@ -1,0 +1,48 @@
+#to implement this function... firstly propose a value between 0 and 27 excluding those upper and lower bounds... then the rest would function like charm
+def print_rangoli(size):
+
+    if 0<size<27:
+
+        line_length = (4*size) - 3#3-> 9
+
+        # your code goes here
+        alpha_list = list('abcdefghijklmnopqrstuvwxyz')
+        
+        main_list = alpha_list[0:size] 
+        z = main_list[::-1]
+        implementable_list = list()
+
+        for i in range(len(z)+1):
+            implementable_list.append(z[0:i])
+        implementable_list.pop(0)
+
+        for i in implementable_list:#[a,b,c][b,c][c]
+            
+            # main_val_to_print = (line_length - (len(i)+(len(i)-2)))//2
+            
+            x = (len(i)) + (len(i)-1) + 2*(len(i)-1)
+            main_val_to_print = (line_length - x)//2#(9-1), (9-3)
+            #----
+            #
+
+            if len(i)==1:
+                print(F"{'-'*main_val_to_print}{i[0]}{'-'*main_val_to_print}")
+            else:
+                print('-'*main_val_to_print, end='')
+                print(*i, *i[:-1][::-1], sep='-', end='')
+                print('-'*main_val_to_print)
+        
+        implementable_list.pop(-1)
+
+        for i in implementable_list[::-1]:
+            x = (len(i)) + (len(i)-1) + 2*(len(i)-1)
+            main_val_to_print = (line_length - x)//2#(9-1), (9-3)
+            if len(i)==1:
+                print(F"{'-'*main_val_to_print}{i[0]}{'-'*main_val_to_print}")
+            
+            else:
+                print('-'*main_val_to_print, end='')
+                print(*i, *i[:-1][::-1], sep='-', end='')
+                print('-'*main_val_to_print)
+    else:
+        print('pick a val between 0 & 27(excluding 0 & 27)')
