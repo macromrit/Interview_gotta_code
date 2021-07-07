@@ -1,5 +1,5 @@
 #to implement this function... firstly propose a value between 0 and 27 excluding those upper and lower bounds... then the rest would function like charm
-def print_rangoli(size):
+def print_rangoli(size: int):
 
     if 0<size<27:
 
