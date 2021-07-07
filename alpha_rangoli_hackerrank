@@ -20,7 +20,7 @@ def print_rangoli(size: int):
             
             # main_val_to_print = (line_length - (len(i)+(len(i)-2)))//2
             
-            x = (len(i)) + (len(i)-1) + 2*(len(i)-1)
+            x = 4*len(i)-3
             main_val_to_print = (line_length - x)//2#(9-1), (9-3)
             #----
             #
