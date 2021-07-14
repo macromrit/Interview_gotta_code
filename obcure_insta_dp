@@ -1,0 +1,5 @@
+#before working on with stuffs... install instaloader via pip command
+import instaloader
+ig = instaloader.Instaloader()
+dp = input("enter the username ya wanna sack: ")
+ig.download_profile(dp, profile_pic_only=True)
