@@ -1,0 +1,30 @@
+from math import floor
+
+size = str(input())
+vals = size.split()
+height = int(vals[0])
+length = int(vals[1])
+
+#imposing constraints
+if 5<height<101 and 15<length<303:
+    mnchr = '.|.'
+    printchrs = list()
+    for i in range(floor(height/2)):
+        printchrs.append(mnchr)
+        mnchr+='.|..|.'  
+
+    defaulties = '-'
+    for x in printchrs:
+        main_token = floor((length - len(x))/2)
+        print(main_token*defaulties +x+ main_token*defaulties)
+
+    greetings = 'welcome'
+    hypo_val = floor((length-len(greetings))/2)
+    print(defaulties*hypo_val+greetings+defaulties*hypo_val)
+
+    for z in printchrs[::-1]:
+        main_token = floor((length - len(z))/2)
+        print(main_token*defaulties +z+ main_token*defaulties)
+
+else:
+    print('Ooopsss... breached the protocols.. try changing values')
