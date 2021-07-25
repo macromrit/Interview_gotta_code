@@ -18,7 +18,7 @@ if 5<height<101 and 15<length<303:
         main_token = floor((length - len(x))/2)
         print(main_token*defaulties +x+ main_token*defaulties)
 
-    greetings = 'welcome'
+    greetings = 'WELCOME'
     hypo_val = floor((length-len(greetings))/2)
     print(defaulties*hypo_val+greetings+defaulties*hypo_val)
 
