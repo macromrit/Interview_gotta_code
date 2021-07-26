@@ -1,0 +1,28 @@
+def merge_the_tools(string: str, 
+                    k: int) -> str:
+    # your code goes here
+    low = 0
+    upp = k
+
+    main_list = list()
+    limit = len(string)//k
+    count = 0
+    while count < limit:
+        main_list.append(string[low:upp])
+        low = upp
+        upp += k
+        count+=1
+    
+    for i in main_list:
+        main_dict = dict()
+        z = list(i)
+        
+        for i in z:
+            if i in main_dict.keys():
+                main_dict[i] += 1
+            else:
+                main_dict[i] = 1
+
+        for x in main_dict.keys():
+            print(x, end='')
+        print()
