@@ -1,0 +1,21 @@
+def solve(s):
+    count = 0
+    main_list = list()
+    while count<len(s):
+        if count == 0:
+            main_list.append(s[count].upper())
+        else:
+            if s[count] == ' ':
+                main_list.append(s[count])
+            elif s[count-1] == ' ':
+                main_list.append(s[count].upper())
+            else:
+                main_list.append(s[count])
+        
+        count+=1
+    
+    main_ans = ''
+    for i in main_list:
+        main_ans+=i
+    
+    return main_ans
