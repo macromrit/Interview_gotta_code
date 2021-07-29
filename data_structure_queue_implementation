@@ -1,0 +1,38 @@
+#stack implementation with underflow and overflow considerations [LIFO]
+queue = list()
+
+while True:
+    print('''
+0 -> break out from the proccess
+1 -> enqueue -> appending elements to the rear
+2 -> dequeue -> poping elements from the head       
+3 -> print all the elements from the queue
+''')
+    main_val = int(input("what's your choice-> "))
+
+    if (main_val == 0):
+        print('Thanks for choosing!! had a good one I guess')
+        break
+    
+    elif (main_val == 1):
+        #enqueue
+        val = str(input('input the element to be enqueued: '))
+        queue.append(val)#rear
+        print(F'{val} enqueued successfully')
+
+    elif (main_val == 2):
+        #dequeue
+        if (len(queue)==0):
+            print('Underflow Error -> ran out of elements to be dequeued')
+        else:
+            print(F'Successfully dequeued the element {queue.pop(0)} from the give queue')##popping from head a.k.a dequeue
+    
+    elif (main_val == 3):
+        if (len(queue)==0):
+            print('No elements were detectable... queue seems empty')
+        else:
+            for i in queue:
+                print(i)
+
+    else:
+        print("please give a valid input... can't comprehend the given value")
