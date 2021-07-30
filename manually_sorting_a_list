@@ -1,0 +1,14 @@
+unsorted_list = [3, 1, 0, 9, 4]
+sorted_list = []
+
+while unsorted_list:
+    link_val = unsorted_list[0]
+    for i in unsorted_list:
+        if i<link_val:
+            link_val=i
+        else:
+            pass
+    unsorted_list.remove(link_val)
+    sorted_list.append(link_val)
+
+print(sorted_list)
