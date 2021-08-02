@@ -1,0 +1,17 @@
+decisive_val = list(map(int, input().split()))
+val_holder = list()
+for _ in range(decisive_val[1]):
+    enter_val = list(map(float, input().split()))
+    val_holder.append(enter_val)
+count = 0
+vals_list = list()
+while count<decisive_val[0]:
+    main_val = 0
+    for i in val_holder:
+        main_val+=i[count]
+    vals_list.append(main_val/decisive_val[1])
+    count+=1
+
+for i in vals_list:
+    print(i)
+    
