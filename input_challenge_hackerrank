@@ -1,0 +1,16 @@
+vals = list(map(int, input().split()))
+main_cal = str(input())
+
+main_val = vals[0]
+hypo_str = ''
+for i in main_cal:
+    if i=='x':
+        hypo_str+='{0}'
+    else:
+        hypo_str+=i
+
+validator = eval(hypo_str.format(main_val))
+if validator == vals[1]:
+    print(True)
+else:
+    print(False)
