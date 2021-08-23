@@ -1,0 +1,1 @@
+def sumoftwo(a: list,b: list,v: int)->bool: return (True if v in [x+y for x in a for y in b] else False)
