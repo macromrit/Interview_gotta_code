@@ -1,0 +1,18 @@
+def twoSum(nums: list, 
+           target: int)->list:
+    count = 0
+    while count<len(nums):
+        main = nums.copy()
+        main.pop(count)
+        real_sol = list()
+        for i in main:
+            if nums[count]+i == target: 
+                real_sol.append(count)
+                real_sol.append(nums.index(i))
+                break
+            else: pass
+        if real_sol: break
+        else: pass
+        count+=1
+        
+    return real_sol
