@@ -1,0 +1,14 @@
+def isValidSubsequence(array: list, 
+                       subsequence: list)->bool:
+    
+    array_copy = array.copy()
+    main_array = list()
+    for element in array:
+        if element in subsequence: 
+            main_array.append(element)
+            array_copy.remove(element)
+        else: pass
+    val = True if (main_array[0:len(subsequence)] == subsequence) else False
+    
+    if len(subsequence)>len(array): return False
+    else: return val
