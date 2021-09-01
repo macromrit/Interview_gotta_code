@@ -1,0 +1,9 @@
+def first_recur(x: list)->int:
+    dicty = {}
+    main_val = -1
+    for i in x:
+        if i in dicty.keys():
+            main_val = i
+            break
+        else: dicty[i]=1
+    return main_val
