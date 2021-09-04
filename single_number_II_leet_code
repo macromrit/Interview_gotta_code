@@ -1,0 +1,9 @@
+def single_no(x: list)->int:
+    main_cal = dict()
+    for i in x:
+        if i in main_cal.keys(): main_cal[i]+=1
+        else: main_cal[i]=1
+    crude_ans = sorted(main_cal.items(), key=lambda x: x[1])[0]
+    ans = crude_ans if (crude_ans[1] == 1) else -1
+    if (ans!=-1): return ans[0]
+    else: return ans        
