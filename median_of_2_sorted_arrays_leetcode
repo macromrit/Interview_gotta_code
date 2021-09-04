@@ -1,0 +1,9 @@
+def findMedianSortedArrays(x: list, y: list)->int:
+    x.extend(y)
+    even = False
+    if len(x)%2==0: even = True
+    else: pass
+    core_mid = len(x)//2
+    if not even: ans = x[core_mid]
+    else: ans = ((x[core_mid]+x[core_mid-1])/2)
+    return ans
