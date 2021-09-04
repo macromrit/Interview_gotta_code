@@ -1,4 +1,4 @@
-def list_transpose(x):
+def list_transpose(x: list)->int or list:
     x_legitimate = True
     for i in x:
         if i == x[0]: continue
